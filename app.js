@@ -4,6 +4,8 @@ const dotenv = require("dotenv");
 const postRouter = require("./routes/post");
 const app = express();
 const path = require("path");
+const port = 3060;
+
 dotenv.config();
 app.use(
   cors({
@@ -17,6 +19,6 @@ app.use("/", express.static(path.join(__dirname, "uploads")));
 // localhost:3060/ 주소가 된다.
 app.use("/post", postRouter);
 
-app.listen(3060, () => {
+app.listen(process.env.PORT || port, () => {
   console.log("서버 실행 중");
 });
