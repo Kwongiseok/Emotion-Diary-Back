@@ -7,6 +7,7 @@ const path = require("path");
 const port = 3060;
 
 dotenv.config();
+app.use(cors());
 app.use(
   cors({
     origin: "http://localhost:3000",
