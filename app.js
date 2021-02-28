@@ -9,7 +9,8 @@ const port = 3060;
 dotenv.config();
 app.use(
   cors({
-    origin: "https://603b07a8bf1ef73e52ca85bb--emotion-diary.netlify.app",
+    // origin: "https://603b07a8bf1ef73e52ca85bb--emotion-diary.netlify.app",
+    origin: "http://localhost:3000",
     credentials: true, // 쿠키도 포함해서 전달.
   })
 );
